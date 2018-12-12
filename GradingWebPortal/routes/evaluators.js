@@ -97,14 +97,13 @@ router.post('/authenticateUser', function(req,res){
 });
 });
 
-router.get('/teamsList', checkAuth, function (req,res) {
+router.get('/teamsList', function (req,res) {
     console.log('Retrieving the list of teams ');
     Team.find().exec()
         .then( data => {
             console.log({data});
             res.status(200).json({
-                message : 'Success',
-                data : data
+                data
             });
         }).catch( err => {
         res.status(500).json({err});
