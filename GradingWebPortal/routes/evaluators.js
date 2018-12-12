@@ -134,13 +134,12 @@ router.post('/authenticateTeam', function(req,res){
 
 });
 
-router.get('/displaySurvey', checkAuth, function(req,res) {
+router.get('/displaySurvey', function(req,res) {
     console.log('Displaying the survey');
     Survey.find().exec().then(data => {
         console.log(data.length);
         res.status(200).json({
-           message : 'Success',
-           data : data
+           data
         });
     }).catch(err => {
         res.status(500).json({

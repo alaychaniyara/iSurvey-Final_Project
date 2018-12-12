@@ -15,6 +15,7 @@
 		1F1900A521B6953D00C518F5 /* iSurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1900A421B6953D00C518F5 /* iSurveyTests.swift */; };
 		1F1900B021B6953D00C518F5 /* iSurveyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1900AF21B6953D00C518F5 /* iSurveyUITests.swift */; };
 		1F1900BE21B695CD00C518F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1900BD21B695CD00C518F5 /* HomeViewController.swift */; };
+		1F28AE7B21C1D4CF00634C7A /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F28AE7A21C1D4CF00634C7A /* QuestionViewController.swift */; };
 		4094CD26D81AA509443B16ED /* Pods_iSurveyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE8638A0697371B1CF37D8A /* Pods_iSurveyTests.framework */; };
 		42840014D231BC1B9DAFBA40 /* Pods_iSurvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E709F5EB8AEE308B67D98610 /* Pods_iSurvey.framework */; };
 		EEB648856559C62D17856D9E /* Pods_iSurveyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E30770A528072A05F4FC8397 /* Pods_iSurveyUITests.framework */; };
@@ -53,6 +54,7 @@
 		1F1900AF21B6953D00C518F5 /* iSurveyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSurveyUITests.swift; sourceTree = "<group>"; };
 		1F1900B121B6953D00C518F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F1900BD21B695CD00C518F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1F28AE7A21C1D4CF00634C7A /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		326108607FD9854EB549D60E /* Pods-iSurveyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSurveyUITests.debug.xcconfig"; path = "Target Support Files/Pods-iSurveyUITests/Pods-iSurveyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3634CB3C2CBE4B970D731AE5 /* Pods-iSurvey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSurvey.release.xcconfig"; path = "Target Support Files/Pods-iSurvey/Pods-iSurvey.release.xcconfig"; sourceTree = "<group>"; };
 		76522FD8519C8BBC68CDF45D /* Pods-iSurveyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSurveyTests.debug.xcconfig"; path = "Target Support Files/Pods-iSurveyTests/Pods-iSurveyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				1F19009821B6953D00C518F5 /* LaunchScreen.storyboard */,
 				1F19009B21B6953D00C518F5 /* Info.plist */,
 				1F1900BD21B695CD00C518F5 /* HomeViewController.swift */,
+				1F28AE7A21C1D4CF00634C7A /* QuestionViewController.swift */,
 			);
 			path = iSurvey;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			files = (
 				1F19009221B6953C00C518F5 /* ViewController.swift in Sources */,
 				1F19009021B6953C00C518F5 /* AppDelegate.swift in Sources */,
+				1F28AE7B21C1D4CF00634C7A /* QuestionViewController.swift in Sources */,
 				1F1900BE21B695CD00C518F5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
