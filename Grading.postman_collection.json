@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "2b64a6e9-de75-4954-bae5-58769699161f",
+		"name": "Grading",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/teams/addTeam",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmY3ZjhlY2ViNGE3ZjE5YjAxZGYxYmYiLCJ1c2VyTmFtZSI6InRlc3RBZG1pbkBnbWFpbC5jb20iLCJ1c2VyUm9sZSI6IkFETUlOIiwiaWF0IjoxNTQzMTA4MTk2LCJleHAiOjE1NDQ0MDQxOTZ9.qyiz_zgS3B4gqDoq2hvcoF2JHvWtoE9cY0Uk9gFuXew",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"teamName\" : \"Team 1\"\n}"
+				},
+				"url": "http://localhost:3000/teams/addTeam"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/signIn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmY3ZjhlY2ViNGE3ZjE5YjAxZGYxYmYiLCJ1c2VyTmFtZSI6InRlc3RBZG1pbkBnbWFpbC5jb20iLCJ1c2VyUm9sZSI6IkFETUlOIiwiaWF0IjoxNTQzMTA4MTk2LCJleHAiOjE1NDQ0MDQxOTZ9.qyiz_zgS3B4gqDoq2hvcoF2JHvWtoE9cY0Uk9gFuXew",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\" : \"testAdmin@gmail.com\",\n\t\"password\" : \"finalDemo\"\n}"
+				},
+				"url": "http://localhost:3000/users/signIn"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/newUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\" : \"testAdmin@gmail.com\",\n\t\"password\" : \"finalDemo\",\n\t\"userRole\" : \"ADMIN\"\n}"
+				},
+				"url": "http://localhost:3000/users/newUser"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/teams",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmY3ZjhlY2ViNGE3ZjE5YjAxZGYxYmYiLCJ1c2VyTmFtZSI6InRlc3RBZG1pbkBnbWFpbC5jb20iLCJ1c2VyUm9sZSI6IkFETUlOIiwiaWF0IjoxNTQzMTA4MTk2LCJleHAiOjE1NDQ0MDQxOTZ9.qyiz_zgS3B4gqDoq2hvcoF2JHvWtoE9cY0Uk9gFuXew",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:3000/teams"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/evaluators",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmY3ZjhlY2ViNGE3ZjE5YjAxZGYxYmYiLCJ1c2VyTmFtZSI6InRlc3RBZG1pbkBnbWFpbC5jb20iLCJ1c2VyUm9sZSI6IkFETUlOIiwiaWF0IjoxNTQzMTA4MTk2LCJleHAiOjE1NDQ0MDQxOTZ9.qyiz_zgS3B4gqDoq2hvcoF2JHvWtoE9cY0Uk9gFuXew",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"evaluatorName\" : \"Gregory Draw\"\n}"
+				},
+				"url": "http://localhost:3000/evaluators"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/evaluators",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmY3ZjhlY2ViNGE3ZjE5YjAxZGYxYmYiLCJ1c2VyTmFtZSI6InRlc3RBZG1pbkBnbWFpbC5jb20iLCJ1c2VyUm9sZSI6IkFETUlOIiwiaWF0IjoxNTQzMTA4MTk2LCJleHAiOjE1NDQ0MDQxOTZ9.qyiz_zgS3B4gqDoq2hvcoF2JHvWtoE9cY0Uk9gFuXew",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:3000/evaluators"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/surveys/viewSurvey",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:3000/surveys/viewSurvey"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/scores",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"teamName\" : \"Team 1\",\n\t\"evaluatorName\" : \"John Doe\",\n\t\"answer1\" : \"2\",\n\t\"answer2\" : \"2\",\n\t\"answer3\" : \"2\",\n\t\"answer4\" : \"2\",\n\t\"answer5\" : \"2\"\n}"
+				},
+				"url": "http://localhost:3000/scores"
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate-Evaluator From App",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJldmFsdWF0b3JOYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE1NDMxMDg4MjgsImV4cCI6MTU0NDQwNDgyOH0.5C1-LnA_T5QUMxy4JLFktrACLw6wMX-nUtmSDb1hitg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"scannedCode\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJldmFsdWF0b3JOYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE1NDMxMDg4MjgsImV4cCI6MTU0NDQwNDgyOH0.5C1-LnA_T5QUMxy4JLFktrACLw6wMX-nUtmSDb1hitg\"\n}"
+				},
+				"url": "http://localhost:3000/evaluators/authenticateUser"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/evaluators/teamsList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJldmFsdWF0b3JOYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE1NDMxMDg4MjgsImV4cCI6MTU0NDQwNDgyOH0.5C1-LnA_T5QUMxy4JLFktrACLw6wMX-nUtmSDb1hitg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:3000/evaluators/teamsList"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/evaluators/authenticateTeam",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJldmFsdWF0b3JOYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE1NDMxMDg4MjgsImV4cCI6MTU0NDQwNDgyOH0.5C1-LnA_T5QUMxy4JLFktrACLw6wMX-nUtmSDb1hitg",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"scannedCode\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZWFtTmFtZSI6IlRlYW0gMSIsImlhdCI6MTU0MzA5ODk3NCwiZXhwIjoxNTQ0Mzk0OTc0fQ.RXjB9_LMaO5_ewyQJCkczAuok20vPVu2s-r8men8oik\"\n}"
+				},
+				"url": "http://localhost:3000/evaluators/authenticateTeam"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/evaluators/displaySurvey",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJldmFsdWF0b3JOYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE1NDMxMDg4MjgsImV4cCI6MTU0NDQwNDgyOH0.5C1-LnA_T5QUMxy4JLFktrACLw6wMX-nUtmSDb1hitg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:3000/evaluators/displaySurvey"
+			},
+			"response": []
+		}
+	]
+}

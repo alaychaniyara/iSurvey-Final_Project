@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GradeApp</string>
+    <string name="message">Point the QR Code</string>
+    <string name="title">User Activities</string>
+    <string name="teamScan">Scan team Code</string>
+    <string name="teamList">View Teams</string>
+</resources>

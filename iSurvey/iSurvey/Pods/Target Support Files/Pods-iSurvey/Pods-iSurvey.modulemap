@@ -1,0 +1,6 @@
+framework module Pods_iSurvey {
+  umbrella header "Pods-iSurvey-umbrella.h"
+
+  export *
+  module * { export * }
+}
