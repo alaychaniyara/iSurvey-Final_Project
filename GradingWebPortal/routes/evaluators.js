@@ -81,8 +81,7 @@ router.post('/authenticateUser', function(req,res){
             if(result.length > 0){
                 console.log('Evaluator Found ', result);
                 res.status(200).json({
-                    message : 'Evaluator Found',
-                    result : result
+                    result
                 })
             }else{
                 res.status(201).json({
