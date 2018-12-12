@@ -110,15 +110,14 @@ router.get('/teamsList', function (req,res) {
     });
 });
 
-router.post('/authenticateTeam', checkAuth, function(req,res){
+router.post('/authenticateTeam', function(req,res){
     console.log('Authentication evaluator' , req.body.scannedCode);
     Team.find({qrCode: req.body.scannedCode}).exec()
         .then( result=> {
             if(result.length > 0){
                 console.log('Team Found ', result);
                 res.status(200).json({
-                    message : 'Team Found',
-                    result : result
+                   result
                 })
             }else{
                 res.status(201).json({
