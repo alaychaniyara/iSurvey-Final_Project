@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         jsonObject.addProperty("scannedCode",result.getText());
         RequestBody formBody = RequestBody.create(JSON,jsonObject.toString());
         final String token = result.getText();
-        final Request request = new Request.Builder().url("http://10.216.74.59:3000/evaluators/authenticateUser")
+        final Request request = new Request.Builder().url("http://18.234.165.21:3000/evaluators/authenticateUser")
                 .header("Authorization","Bearer " +result.getText())//replace the ip here
                 .addHeader("Content-Type","application/json")
                 .post(formBody)

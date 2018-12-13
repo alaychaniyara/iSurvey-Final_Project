@@ -43,7 +43,7 @@ public class UserActivity extends AppCompatActivity {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("scannedCode",userToken);
         RequestBody formBody = RequestBody.create(JSON,jsonObject.toString());
-        final Request request = new Request.Builder().url("http://192.168.0.1:3000/evaluators/teamsList")
+        final Request request = new Request.Builder().url("http://18.234.165.21:3000/evaluators/teamsList")
                 .header("Authorization","Bearer " +userToken)//replace the ip here
                 .addHeader("Content-Type","application/json")
                 .build();
