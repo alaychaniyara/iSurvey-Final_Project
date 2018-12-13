@@ -9,11 +9,14 @@
 import UIKit
 import AVFoundation
 import Alamofire
+
 class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
-    let baseURL = URL(string: "http://172.20.4.178:3000/evaluators/authenticateUser")
+    let baseURL = URL(string: "http://18.234.165.21:3000/evaluators/authenticateUser")
     
     var evaluatorName = ""
+    var evaluatorCode = ""
+    
     //variable declaration for QR CODE
     var captureSession:AVCaptureSession!
     var videoPreviewLayer:AVCaptureVideoPreviewLayer!
@@ -72,42 +75,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         view.layer.addSublayer(videoPreviewLayer)
         
         captureSession.startRunning()
-        /*
-         // Get the back-facing camera for capturing videos
-         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
-         
-         guard let captureDevice = deviceDiscoverySession.devices.first else {
-         print("Failed to get the camera device")
-         return
-         }
-         
-         do {
-         // Get an instance of the AVCaptureDeviceInput class using the previous device object.
-         let input = try AVCaptureDeviceInput(device: captureDevice)
-         
-         // Set the input device on the capture session.
-         captureSession?.addInput(input)
-         
-         let captureMetadataOutput = AVCaptureMetadataOutput()
-         captureSession?.addOutput(captureMetadataOutput)
-         // Set delegate and use the default dispatch queue to execute the call back
-         captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-         captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
-         
-         // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
-         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-         videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-         videoPreviewLayer?.frame = view.layer.bounds
-         view.layer.addSublayer(videoPreviewLayer!)
-         
-         
-         // Start video capture.
-         captureSession!.startRunning()
-         
-         } catch {
-         // If any error occurs, simply print it out and don't continue any more.
-         print(error)
-         return*/
+       
         
     }
     
@@ -147,13 +115,13 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         dismiss(animated: true)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "loggedIn"
-//        {
-//            let vc = segue.destination as! HomeViewController
-//            vc.evaluatorNameId = evaluatorName
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loggedIn"       {
+            let vc = segue.destination as! HomeViewController
+            vc.evaluatorNameId = evaluatorName
+            vc.evaluatorCode = evaluatorCode
+        }
+    }
     func found(code: String) {
     
         print(code)
@@ -164,33 +132,35 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 
                 switch response.result {
                 case .success:
-                      print(response.result.value)
+                      print(response.result.value!)
                     print("API CALLS SUCCESS")
-//  print(response.result.value)
-//                    if let json = response.result.value {
-//                        let JSON = json as! NSDictionary
-//                        // print("JSON: \(JSON)")
-//                        let data = JSON["data"] as! NSDictionary;
-//                        let token = data["token"] as! String;
-//                        self.saveToken(token: token)
-//                        UserDefaults.standard.set(false, forKey: "status")
-//                        print("Validation Successful")
-//                        self.performSegue(withIdentifier: "showTeams", sender: self)
-//                    }
+                     if let json = response.result.value {
+                        let JSON = json as! NSDictionary
+                        // print("JSON: \(JSON)")
+                        let data = JSON["result"] as! NSArray;
+                        let token = data[0] as! NSDictionary;
+                       // self.saveToken(token: token)
+                        UserDefaults.standard.set(false, forKey: "status")
+                        print("Validation Successful")
+                        self.evaluatorName = token.object(forKey: "evaluatorName") as! String
+                       self.evaluatorCode = token.object(forKey: "qrCode") as! String
+                        self.performSegue(withIdentifier: "loggedIn", sender: self)
+                     }
                 case .failure(_):
                     print("some error occured")
                 }
         }
-        //evaluatorName = code
-        //performSegue(withIdentifier: "loggedIn", sender: self)  }
+        
     }
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
 
+    
 }
 

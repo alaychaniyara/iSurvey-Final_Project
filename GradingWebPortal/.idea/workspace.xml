@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c96bc0fb-10fd-478d-a9a5-0745ddccbd86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/routes/evaluators.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/evaluators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../iSurvey/iSurvey/iSurvey.xcworkspace/xcuserdata/akki0923.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../iSurvey/iSurvey/iSurvey.xcworkspace/xcuserdata/akki0923.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../iSurvey/iSurvey/iSurvey/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/../iSurvey/iSurvey/iSurvey/Base.lproj/Main.storyboard" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../iSurvey/iSurvey/iSurvey/HomeViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../iSurvey/iSurvey/iSurvey/HomeViewController.swift" afterDir="false" />
@@ -96,6 +95,7 @@
     <session id="-1955396871">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.opened" value="2" />
@@ -427,18 +427,17 @@
       <workItem from="1543921746817" duration="64000" />
       <workItem from="1543942164094" duration="16000" />
       <workItem from="1544221013206" duration="2575000" />
-      <workItem from="1544627363020" duration="8554000" />
+      <workItem from="1544627363020" duration="8938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142735000" />
+    <option name="totallyTimeSpent" value="143119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="737" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -452,7 +451,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2387597" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2387597" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
